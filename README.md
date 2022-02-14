@@ -1,2 +1,3 @@
 # course__alpinejs
-Learning alpinejs
+
+## Alpinejs Playground

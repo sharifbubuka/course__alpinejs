@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width. initial-scale=1.0">
+            <title></title>
+            <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body>
+            <div x-data="{open: false}">
+                <button x-on:click="open = !open">Toggle Dropdown</button>
+
+                <div x-show="open" x-transition.scale.30>
+                    <ul>
+                        <li>Dropdown item 1</li>
+                        <li>Dropdown item 2</li>
+                        <li>Dropdown item 3</li>
+                        <li>Dropdown item 4</li>
+                        <li>Dropdown item 5</li>
+                        <li>Dropdown item 6</li>
+                    </ul>
+                </div>
+            </div>
+        </body>
+    </html>
+</html>

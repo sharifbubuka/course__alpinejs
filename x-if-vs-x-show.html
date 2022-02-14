@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width. initial-scale=1.0">
+            <title>x-show vs x-if</title>
+            <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+        </head>
+        <body>
+            <div x-data="{ open: false }">
+                <button x-on:click="open = ! open">Toggle Dropdown</button>
+                <!-- x-show toggle the hidden css class to hide and unhide the component -->
+                <div x-show="open">
+                    Dropdown Contents...
+                </div>
+
+                <!-- x-if is used to render or not render html component (using templates always) -->
+                <template x-if="open">
+                    <div>Dropdown contents ...</div>
+                </template>
+            </div>
+        </body>
+    </html>
+</html>

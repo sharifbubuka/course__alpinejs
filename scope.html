@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width. initial-scale=1.0">
+            <title>Components & Events</title>
+            <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+        </head>
+        <body>
+            <!-- The name property is not accessible outside of this component -->
+            <div x-data="{counter: 2, name: 'Alpine app'}">
+                <p><button x-on:click="counter++">Increment by 1</button></p>
+                Show counter <b x-text="counter"></b>
+                <p><button x-on:click="counter--">Decrement by 1</button></p>
+
+                <!-- The child property can not be accesed by the parent -->
+                <!-- The child component can access the parent properties -->
+                <div x-data="{child: true}" x-text="counter"></div>
+            </div>
+
+            <div x-data="{counter: 2}">
+                <p><button x-on:click="counter++">Increment by 1</button></p>
+                Show counter <b x-text="counter"></b>
+                <p><button x-on:click="counter--">Decrement by 1</button></p>
+            </div>
+        </body>
+    </html>
+</html>
